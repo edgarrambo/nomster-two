@@ -1,3 +1,4 @@
+
 <% @places.each do |place| %>
   <div class="booyah-box col-10 offset-1">
     <h1><%= link_to place.name, place_path(place) %></h1>
@@ -17,9 +18,17 @@
   <%= place.comments.last.message %>
   <small><%= place.comments.last.user.email %></small>
 </blockquote>
+</div>
 <% end %>
+
 </div>
+<% end %>
+<div class="col-10 offset-5">
+<%= will_paginate @products, previous_label: h("<"), next_label: h(">") %>
 </div>
- <% end %>
+
+
+
+
 
 
