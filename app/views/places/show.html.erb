@@ -100,3 +100,13 @@
 <% end %>
 </div>
 
+
+
+<h2>Pictures</h2>
+<%= simple_form_for @photo, url: 'place_photos_path(@place)' do |f| %>
+<%= f.input :picture %>.
+<%= f.input :caption %>
+<%= f.submit "add a photo" , class: 'btn btn-primary' %>
+
+<% end %>
+
