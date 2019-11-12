@@ -81,9 +81,6 @@
 </div>
 
 <div class="clear"></div>
-
-
-
 <div class="row">
 <% @place.comments.each do |comment| %>
 <div class="col-12 col-sm-6">
@@ -113,8 +110,11 @@
 <div class="row">
 <% @place.photos.each do |comment| %>
 <div class="col-12 col-sm-6">
-<blockquote>
-  <% end %>
-
+    <blockquote>
+        <%= caption.message %>
+      <small><%= caption.user.email %></smal>
+    </blockquote>
+  </div>
+<% end %>
 
 
