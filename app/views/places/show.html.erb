@@ -111,7 +111,8 @@
 <% @place.photos.each do |photo| %>
 <div class="col-12 col-sm-6">
    <blockquote>
-<% photo.caption %>
+<%= photo.caption %> 
+
 <small>
   <%= photo.user.email %>
 </small>
