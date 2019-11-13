@@ -107,12 +107,23 @@
 </div>
 <% end %>
 
+
 <% @place.photos.each do |photo| %>
-<b><% photo.caption %></b>
+<div class="col-12 col-sm-6">
+   <blockquote>
+<% photo.caption %>
+<small>
+  <%= photo.user.email %>
+</small>
+</blockquote>
 <img>
 <%= image_tag photo.picture.to_s %>
 </img>
-<small><%= photo.user.email %></small>
-<% end %>
+</div>
 
+
+<% end %>
+</div>
+</div>
+</div>
 
