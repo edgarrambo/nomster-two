@@ -101,19 +101,19 @@
 
 <h2>Pictures</h2>
 <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
-<%= f.input :picture %>.
+<%= f.input :picture %>
 <%= f.input :caption %>
 <%= f.submit "add a photo" , class: 'btn btn-primary' %>
+</div>
 <% end %>
+
 
 
 <div class="row">
 <% @place.photos.each do |comment| %>
 <div class="col-12 col-sm-6">
     <blockquote>
-        <%= caption.text %>
-      <small><%= caption.user.email %></smal>
-    </blockquote>
+\    </blockquote>
   </div>
 <% end %>
 
