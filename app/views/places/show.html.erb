@@ -34,6 +34,7 @@
 
 
 <div class="float-right">
+
 	<% if current_user && current_user == @place.user %>
 <%= link_to 'Edit' , edit_place_path(@place), class: 'btn btn-primary' %>
 <%= link_to 'destroy' , place_path(@place) , method: :delete , data: {confirm: 'are you sure yo want to delete this?'}, class: "btn btn-danger" %>
@@ -99,7 +100,8 @@
 
 
 
-<h2>Pictures</h2>
+<h2>Upload your pictures!</h2>
+
 <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
 <%= f.input :picture %>
 <%= f.input :caption %>
